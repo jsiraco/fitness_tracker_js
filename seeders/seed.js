@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const db = require('../models');
+const db = require("../models");
 
 mongoose.connect("mongodb+srv://JSiraco:rootroot@cluster0.iabgj.mongodb.net/FitnessDB?retryWrites=true&w=majority", {
   useNewUrlParser: true
