@@ -8,11 +8,17 @@ const workoutSchema = new Schema({
     },
     exercises: [
         {
-            type: ,
-            name: ,
-            weight: ,
-            reps: ,
-            sets: 
+            type: { type: String },
+            name: { type: String },
+            weight: { type: Number },
+            duration: { type: Number },
+            reps: { type: Number },
+            sets: { type: Number }
         }
     ]
 })
+
+
+const Workout = mongoose.model("Workout", workoutSchema);
+
+module.exports = Workout;
