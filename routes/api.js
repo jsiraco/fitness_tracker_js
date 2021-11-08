@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Workout = require("../models/workout.js");
 
+// Last workout duration
 router.get("/workouts", async (req, res) => {
     try {
     const dbWorkout = await Workout.find();
@@ -59,6 +60,7 @@ router.get("/workouts/range", async (req, res) => {
     }
 });
 
+// posts workout
 router.post("/workouts", async ({ body }, res) => {
     try {
         const workout = req.body;
@@ -69,6 +71,7 @@ router.post("/workouts", async ({ body }, res) => {
     }
 });
 
+// Adds exercise to current workout
 router.put("/workouts/:id", async (req, res) => {
     try {
         const query = { _id: mongojs.ObjectId(req.params.id) };
