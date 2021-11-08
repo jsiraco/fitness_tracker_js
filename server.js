@@ -10,14 +10,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb+srv://JSiraco:rootroot@cluster0.iabgj.mongodb.net/FitnessDB?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-    useFindAndModify: false
-  });
+mongoose.connect("mongodb+srv://JSiraco:rootroot@cluster0.iabgj.mongodb.net/FitnessDB?retryWrites=true&w=majority", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
 // routes
 app.use(require("./routes/index.js"));
