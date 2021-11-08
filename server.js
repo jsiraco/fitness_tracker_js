@@ -10,6 +10,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+// URI allows Heroku to connect
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://JSiraco:rootroot@cluster0.iabgj.mongodb.net/FitnessDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,

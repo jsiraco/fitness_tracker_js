@@ -1,3 +1,4 @@
+// barrel file
 const router = require("express").Router();
 
 const apiRoutes = require("./api.js");

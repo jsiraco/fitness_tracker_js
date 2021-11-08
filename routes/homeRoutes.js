@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const path = require("path");
 
+// routes for each of the home pages
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname + "../public/index.html"));
 })

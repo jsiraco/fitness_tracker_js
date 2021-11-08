@@ -9,7 +9,7 @@ mongoose.connect("mongodb+srv://JSiraco:rootroot@cluster0.iabgj.mongodb.net/Fitn
     useFindAndModify: false
   });
 
-
+// seeds db for easy testing 
 const workoutSeed = [
   {
     day: new Date(new Date().setDate(new Date().getDate() - 9)),
