@@ -24,6 +24,9 @@ This work is protected under the MIT License: (https://opensource.org/licenses/M
 Fork
 
 ## Usage
+![Fitness Tracker Charts](https://user-images.githubusercontent.com/83827081/140832121-10f0bcfc-f7df-4cda-9a0c-d562fdd6927a.png)
+![Fitness Tracker Homepage](https://user-images.githubusercontent.com/83827081/140832127-faf2cafa-d044-41cb-9e15-a3c2e5817719.png)
+
 
 
 ## Questions
