@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://JSiraco:rootroot@cluster0.iabgj.mongodb.net/FitnessDB?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://JSiraco:rootroot@cluster0.iabgj.mongodb.net/FitnessDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
