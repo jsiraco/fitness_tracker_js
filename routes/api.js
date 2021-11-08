@@ -60,17 +60,6 @@ router.get("/workouts/range", async (req, res) => {
     }
 });
 
-// posts workout
-router.post("/workouts", async ({ body }, res) => {
-    try {
-        const workout = req.body;
-        const addWorkout = await Workout.create({ exercises: workout });
-        res.status(200).json(addWorkout);
-    } catch (err) {
-        res.status(400).json(err);
-    }
-});
-
 // Adds exercise to current workout
 router.put("/workouts/:id", async (req, res) => {
     try {
@@ -82,6 +71,17 @@ router.put("/workouts/:id", async (req, res) => {
         res.status(200).json(addExercise);
     } catch (err) {
         res.status(500).json(err);
+    }
+});
+
+// posts workout
+router.post("/workouts", async (req, res) => {
+    try {
+        const workout = req.body;
+        const addWorkout = await Workout.create({ exercises: workout });
+        res.status(200).json(addWorkout);
+    } catch (err) {
+        res.status(400).json(err);
     }
 });
 
