@@ -74,9 +74,9 @@ router.post("/workouts", async ({ body }, res) => {
 // Adds exercise to current workout
 router.put("/workouts/:id", async (req, res) => {
     try {
-        const query = { _id: mongojs.ObjectId(req.params.id) };
+        const id = { _id: mongojs.ObjectId(req.params.id) };
         const workout = req.body;
-        const addExercise = await Workout.updateOne(query, {
+        const addExercise = await Workout.updateOne(id, {
             $push: { exercises: workout },
         });
         res.status(200).json(addExercise);
